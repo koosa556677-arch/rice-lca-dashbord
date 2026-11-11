@@ -82,7 +82,7 @@
                         Thailand Rice LCA & CFP Dashboard
                         <span class="text-xs bg-brand-900/80 text-brand-400 border border-brand-700/50 px-2 py-0.5 rounded-full font-medium">Central Region 2024/25</span>
                     </h1>
-                    <p class="text-xs text-slate-400">ISO 14067 & TGO Compliant Farm-Gate Environmental Assessment Model</p>
+                    <p class="text-xs text-slate-400">Screening LCA (cradle-to-farm-gate) · Methodology aligned with ISO 14040/14067 &amp; IPCC Tier 1 · Not a certified carbon footprint</p>
                 </div>
             </div>
 
@@ -299,7 +299,7 @@
                 <div class="flex items-center justify-between mb-3">
                     <div>
                         <h2 class="text-sm font-bold text-white flex items-center gap-2">
-                            <i class="fa-solid fa-scale-balanced text-purple-400"></i> Yield vs. Carbon Footprint Paradox
+                            <i class="fa-solid fa-scale-balanced text-purple-400"></i> Yield vs. Carbon Intensity Relationship
                         </h2>
                         <p class="text-xs text-slate-400">Paddy Yield (kg/rai) vs Emission Intensity (kg CO₂e/kg)</p>
                     </div>
@@ -317,7 +317,7 @@
                     <i class="fa-solid fa-bullseye text-sm"></i> Emission Hotspot #1: Field Methane
                 </div>
                 <p class="text-xs text-slate-300 leading-relaxed">
-                    Continuous flooded paddy fields generate anaerobic conditions, causing <strong class="text-emerald-400">82.7%–85.1%</strong> of total GHG emissions in the form of methane ($CH_4$). Adopting <strong>Alternate Wetting & Drying (AWD)</strong> is the single most effective decarbonization lever.
+                    Continuous flooded paddy fields generate anaerobic conditions, causing <strong class="text-emerald-400">82.7%–85.1%</strong> of total GHG emissions in the form of methane ($CH_4$). Adopting <strong>Alternate Wetting & Drying (AWD)</strong> is the largest single lever in this model (assumed −35% CH₄; see Methodology &amp; Limitations).
                 </p>
             </div>
 
@@ -326,7 +326,7 @@
                     <i class="fa-solid fa-fire-flame-curved text-sm"></i> Emission Hotspot #2: Straw Burning
                 </div>
                 <p class="text-xs text-slate-300 leading-relaxed">
-                    Open field burning of rice straw (69% burning ratio in Central region) contributes <strong class="text-amber-400">~12.8%</strong> of total carbon footprint ($CO_2$, $CH_4$, $N_2O$). Enforcing 100% straw incorporation or bio-char transformation eliminates over 4.15M tCO₂e.
+                    Open field burning of rice straw (69% burning ratio in Central region) contributes <strong class="text-amber-400">~13.1%</strong> of the regional total (11.4%–13.3% by variety), about 4.15M tCO₂e in this model. Note: burning-stage figures appear to include CO₂; under IPCC guidance biogenic CO₂ is normally excluded (see Methodology &amp; Limitations). Switching to incorporation or bio-char removes burning emissions but incorporated straw can raise field CH₄, so net savings are smaller than the burning figure alone.
                 </p>
             </div>
 
@@ -383,12 +383,38 @@
             </div>
         </div>
 
+        <!-- Methodology & Limitations -->
+        <section id="methodology" class="bg-dark-card border border-dark-border rounded-xl p-5 space-y-3">
+            <h2 class="text-sm font-bold text-white">Methodology &amp; Limitations</h2>
+            <div class="grid md:grid-cols-2 gap-4 text-xs text-slate-300 leading-relaxed">
+                <div>
+                    <p class="font-bold text-emerald-400 mb-1">Scope</p>
+                    <ul class="list-disc pl-4 space-y-1">
+                        <li>Functional unit: 1 kg paddy rice. Boundary: cradle-to-farm-gate, Central Region, crop year 2024/25 (2567/68).</li>
+                        <li>Included: field CH₄, rice-straw burning, fertilizer, diesel. Excluded: pesticides, seed, irrigation electricity, organic inputs, post-harvest.</li>
+                        <li>Method: IPCC 2006/2019 Tier 1 defaults and TGO emission factors; GWP-100 values should be stated explicitly (AR4/AR5/AR6).</li>
+                        <li>Status: screening LCA from public data. Not verified or certified under ISO 14067.</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="font-bold text-amber-400 mb-1">Known limitations</p>
+                    <ul class="list-disc pl-4 space-y-1">
+                        <li>Straw burning, fertilizer and diesel per rai are identical for every variety (about 502, 131 and 20 kg CO₂e/rai). Differences between varieties come only from CH₄ and yield.</li>
+                        <li>Field CH₄ is about 3.2 tCO₂e/rai in the regional average. This is high relative to typical IPCC Tier 1 estimates and should be verified (unit conversion ha→rai, days flooded, scaling factors).</li>
+                        <li>The "Overall" row differs slightly from the sum of varieties (about 0.9% in total emissions).</li>
+                        <li>Scenarios are simplified: AWD is an assumed −35% CH₄; zero burning does not add CH₄ from incorporated straw.</li>
+                        <li>No uncertainty range is shown. Treat results as relative comparisons and hotspot identification, not precise values.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->
     <footer class="bg-dark-card border-t border-dark-border py-4 mt-8">
         <div class="max-w-7xl mx-auto px-4 text-center text-xs text-slate-500">
-            Thailand Rice Life Cycle Assessment (LCA) Model | Data Sources: OAE Thailand, TGO Emission Factor Database, IPCC 2006/2019 Guidelines.
+            Thailand Rice Life Cycle Assessment (LCA) Model | Data Sources: OAE Thailand, TGO Emission Factor Database, IPCC 2006/2019 Guidelines. Screening-level estimates with significant uncertainty; see Methodology &amp; Limitations.
         </div>
     </footer>
 
@@ -446,8 +472,8 @@
 
             // 2. Map and adjust for What-if Scenarios
             return subset.map(item => {
-                const ch4 = isAWD ? item.ch4_ton * 0.65 : item.ch4_ton; // 35% reduction from AWD
-                const burn = isZeroBurn ? 0 : item.burn_ton;          // 100% elimination if zero burn
+                const ch4 = isAWD ? item.ch4_ton * 0.65 : item.ch4_ton; // ASSUMPTION: -35% CH4 for AWD. Replace with a cited IPCC 2019 scaling factor or local trial data.
+                const burn = isZeroBurn ? 0 : item.burn_ton;          // Simplification: removes burning only; does NOT add CH4 from incorporated straw
                 const fert = item.fert_ton;
                 const diesel = item.diesel_ton;
                 const total = ch4 + burn + fert + diesel;
