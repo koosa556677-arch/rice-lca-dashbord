@@ -119,6 +119,7 @@
                     <option value="CENTRAL-2024-CHAINAT1">Chai Nat 1</option>
                     <option value="CENTRAL-2024-GOV-NON-SENSITIVE">Gov Non-Photoperiod Sensitive</option>
                     <option value="CENTRAL-2024-GOV-SENSITIVE">Gov Photoperiod Sensitive</option>
+                    <option value="CENTRAL-2024-HOMSUPHAN">Hom Suphan Buri</option>
                     <option value="CENTRAL-2024-KDML105">Khao Dawk Mali 105</option>
                     <option value="CENTRAL-2024-NATIVE">Native Varieties</option>
                     <option value="CENTRAL-2024-PATHUM1">Pathum Thani 1</option>
@@ -317,7 +318,7 @@
                     <i class="fa-solid fa-bullseye text-sm"></i> Emission Hotspot #1: Field Methane
                 </div>
                 <p class="text-xs text-slate-300 leading-relaxed">
-                    Continuous flooded paddy fields generate anaerobic conditions, causing <strong class="text-emerald-400">43.3%–47.8%</strong> of total GHG emissions in the form of methane ($CH_4$). Adopting <strong>Alternate Wetting & Drying (AWD)</strong> is the main lever for this stage (assumed −35% CH₄; see Methodology &amp; Limitations).
+                    Continuous flooded paddy fields generate anaerobic conditions, causing <strong class="text-emerald-400">~50%</strong> of total GHG emissions in the form of methane ($CH_4$). Adopting <strong>Alternate Wetting & Drying (AWD)</strong> is the main lever for this stage (assumed −35% CH₄; see Methodology &amp; Limitations).
                 </p>
             </div>
 
@@ -326,7 +327,7 @@
                     <i class="fa-solid fa-fire-flame-curved text-sm"></i> Emission Hotspot #2: Straw Burning
                 </div>
                 <p class="text-xs text-slate-300 leading-relaxed">
-                    Open field burning of rice straw (69% burning ratio in Central region) contributes <strong class="text-amber-400">~43%</strong> of the regional total (40%–44% by variety), about 4.15M tCO₂e in this model. This depends heavily on the straw-burning emission factor (1.12 kg CO₂e/kg), which appears to include CO₂ and should be verified. Under IPCC guidance biogenic CO₂ is normally excluded (see Methodology &amp; Limitations). Switching to incorporation or bio-char removes burning emissions but incorporated straw can raise field CH₄, so net savings are smaller than the burning figure alone.
+                    Open field burning of rice straw (69% burning ratio in Central region) contributes <strong class="text-amber-400">~39%</strong> of the regional total, about 4.28M tCO₂e in this model. This depends heavily on the straw-burning emission factor (1.12 kg CO₂e/kg), which appears to include CO₂ and should be verified. Under IPCC guidance biogenic CO₂ is normally excluded (see Methodology &amp; Limitations). Switching to incorporation or bio-char removes burning emissions but incorporated straw can raise field CH₄, so net savings are smaller than the burning figure alone.
                 </p>
             </div>
 
@@ -335,7 +336,7 @@
                     <i class="fa-solid fa-chart-line-down text-sm"></i> Yield Efficiency Impact
                 </div>
                 <p class="text-xs text-slate-300 leading-relaxed">
-                    High-yielding varieties like <strong class="text-emerald-400">Suphan Buri 1 (735 kg/rai)</strong> dilute fixed land emissions to achieve <strong>1.60 kg CO₂e/kg</strong>, whereas lower-yield varieties like <strong class="text-rose-400">RD6 (356 kg/rai)</strong> rise to <strong>3.52 kg CO₂e/kg</strong>.
+                    High-yielding varieties like <strong class="text-emerald-400">Suphan Buri 1 (736 kg/rai)</strong> dilute fixed land emissions to achieve <strong>1.76 kg CO₂e/kg</strong>, whereas lower-yield varieties like <strong class="text-rose-400">RD6 (357 kg/rai)</strong> rise to <strong>3.63 kg CO₂e/kg</strong>.
                 </p>
             </div>
         </div>
@@ -390,25 +391,55 @@
                 <div>
                     <p class="font-bold text-emerald-400 mb-1">Scope</p>
                     <ul class="list-disc pl-4 space-y-1">
-                        <li>Functional unit: 1 kg paddy rice. Boundary: cradle-to-farm-gate, Central Region, crop year 2024/25 (2567/68).</li>
+                        <li>Functional unit: 1 kg paddy rice. Boundary: cradle-to-farm-gate, Central Region, main-season rice (นาปี) crop year 2567/68 (2024/25).</li>
                         <li>Included: field CH₄, rice-straw burning, fertilizer, diesel. Excluded: pesticides, seed, irrigation electricity, organic inputs, post-harvest.</li>
-                        <li>Method: IPCC 2006/2019 Tier 1 defaults and TGO emission factors; GWP-100 values should be stated explicitly (AR4/AR5/AR6).</li>
+                        <li>Method: IPCC framework with Thailand's Tier 2 seasonal CH₄ factor for irrigated main-season (นาปี) rice, Central region (143 kg CH₄/ha/season, to be verified against Thailand's BTR1), GWP-100 CH₄ = 28 (AR5-based); TGO emission factors for fertilizer and diesel. Main season only.</li>
                         <li>Status: screening LCA from public data. Not verified or certified under ISO 14067.</li>
                     </ul>
                 </div>
                 <div>
                     <p class="font-bold text-amber-400 mb-1">Known limitations</p>
                     <ul class="list-disc pl-4 space-y-1">
-                        <li>Straw burning, fertilizer and diesel per rai are identical for every variety (about 502, 131 and 20 kg CO₂e/rai). Differences between varieties come only from CH₄ and yield.</li>
-                        <li>Field CH₄ now converts area from rai to hectares (1 rai = 0.16 ha) before applying the kg CH₄/ha/day factor. Earlier versions omitted this and overstated CH₄ about 6.25×.</li>
+                        <li>CH₄, straw burning, fertilizer and diesel per rai are identical for every variety (CH₄ about 641 kg CO₂e/rai). Differences in carbon footprint between varieties come only from yield. The Rice Department recommends lower fertilizer rates for photoperiod-sensitive varieties, so their footprint may be overstated here.</li>
+                        <li>Field CH₄ converts area from rai to hectares (1 rai = 0.16 ha) before applying the seasonal factor. Earlier versions omitted this and overstated CH₄ about 6.25×.</li>
                         <li>The straw-burning factor (1.12 kg CO₂e/kg) appears to include biogenic CO₂; IPCC Tier 1 CH₄+N₂O only would be roughly 0.09–0.10 kg CO₂e/kg dry matter. This strongly affects the burning share. Verify before reporting.</li>
-                        <li>Baseline CH₄ factor 1.30 kg/ha/day is the IPCC 2006 default (2019 Refinement lists a different value); only a water-regime scaling factor (0.85) is applied, with no pre-season or organic-amendment factors.</li>
+                        <li>The CH₄ factor is a single national seasonal value; it does not reflect cultivar duration, water management or straw management on individual farms.</li>
                         <li>The "Overall" row differs slightly from the sum of varieties (about 0.9% in total emissions).</li>
                         <li>Scenarios are simplified: AWD is an assumed −35% CH₄; zero burning does not add CH₄ from incorporated straw.</li>
                         <li>No uncertainty range is shown. Treat results as relative comparisons and hotspot identification, not precise values.</li>
                     </ul>
                 </div>
             </div>
+        </section>
+
+        <!-- References -->
+        <section id="references" class="bg-dark-card border border-dark-border rounded-xl p-5 space-y-3">
+            <h2 class="text-sm font-bold text-white">Parameters &amp; References</h2>
+            <div class="overflow-x-auto"><table class="w-full text-xs text-slate-300">
+                <thead><tr class="text-left text-slate-400"><th class="py-1 pr-3">Parameter</th><th class="pr-3">Value</th><th class="pr-3">Source</th><th>Status</th></tr></thead>
+                <tbody class="align-top">
+                    <tr><td class="py-1 pr-3">Area, production, yield by variety</td><td class="pr-3">OAE 2567/68 table</td><td class="pr-3">[1]</td><td class="text-emerald-400">Sourced (checked against the OAE PDF)</td></tr>
+                    <tr><td class="py-1 pr-3">CH₄ emission factor</td><td class="pr-3">143 kg CH₄/ha/season</td><td class="pr-3">[3] Thai inventory Tier 2, irrigated main crop, Central; framework [4]. For comparison, [8] reports 18.86 g CH₄/m² (188.6 kg/ha) for Pathum Thani rice</td><td class="text-amber-400">To verify (BTR1)</td></tr>
+                    <tr><td class="py-1 pr-3">GWP-100 (CH₄)</td><td class="pr-3">28 (AR5)</td><td class="pr-3">TGO product CFP factors use IPCC 2013 GWP-100 [9]; the national inventory uses AR4, CH₄ = 25 [2]</td><td class="text-amber-400">Consistent with TGO CFP, differs from national inventory</td></tr>
+                    <tr><td class="py-1 pr-3">Straw 650 kg/rai; burned 69%</td><td class="pr-3">National averages</td><td class="pr-3">[5]</td><td class="text-emerald-400">Sourced (national)</td></tr>
+                    <tr><td class="py-1 pr-3">Straw-burning factor</td><td class="pr-3">1.12 kg CO₂e/kg</td><td class="pr-3">No source found; [5] gives only black carbon, not a CO₂e factor</td><td class="text-rose-400">Assumption (likely includes biogenic CO₂)</td></tr>
+                    <tr><td class="py-1 pr-3">Fertilizer 50.68 kg/rai (55% NPK / 45% urea)</td><td class="pr-3">Fixed for all varieties</td><td class="pr-3">Within the Rice Department recommendation for non-photoperiod-sensitive irrigated rice, about 45 to 55 kg/rai [7]. For photoperiod-sensitive varieties [7] recommends about 30 to 35 kg/rai. A Pathum Thani study used 35 kg/rai [8]</td><td class="text-amber-400">Partly sourced (recommended range, not surveyed use)</td></tr>
+                    <tr><td class="py-1 pr-3">Fertilizer factors</td><td class="pr-3">1.94 / 3.37 kg CO₂e/kg</td><td class="pr-3">Derivation not documented</td><td class="text-amber-400">To verify</td></tr>
+                    <tr><td class="py-1 pr-3">Diesel use</td><td class="pr-3">7.5 L/rai</td><td class="pr-3">No source found; a Pathum Thani study reports 20.82 L/rai fuel (diesel + gasoline) [8]</td><td class="text-rose-400">Assumption</td></tr>
+                    <tr><td class="py-1 pr-3">Diesel factor</td><td class="pr-3">2.70 kg CO₂e/L</td><td class="pr-3">The TGO CFP table lists production-stage diesel only (0.3503 kg CO₂e/kg) [9]; combustion factor not verified</td><td class="text-amber-400">To verify</td></tr>
+                </tbody></table></div>
+            <ol class="list-decimal pl-5 space-y-1 text-xs text-slate-300">
+                <li>Office of Agricultural Economics (OAE), Thailand. Main-season rice (ข้าวนาปี): planted area, harvested area, production and yield by variety and province, crop year 2567/68. Central Region totals and all ten variety rows were checked against the OAE PDF.</li>
+                <li>Thailand Fourth Biennial Update Report, Facilitative Sharing of Views presentation, June 2025 (DCCE, UNDP, GEF): IPCC 2006 Guidelines, GWP AR4, Tier 1 and Tier 2; Tier 2 data and emission factors reported in BTR1.</li>
+                <li>EGU26-5801 (conference abstract, updated 13 Mar 2026): Thai inventory applies 143 and 71.8 kg CH₄/ha/season for the main and second rice crops (Central/Southern). Title and authors to be added; confirm in Thailand's BTR1.</li>
+                <li>IPCC 2006 Guidelines for National GHG Inventories, Vol. 4 Ch. 5, with 2019 Refinement (method framework for rice CH₄).</li>
+                <li>Burana, C., Tantivit, K., Chaisu, K., and Tatmala, N. (2025). การจัดการเพื่อลดการเผาตอซังและฟางข้าวหลังการเก็บเกี่ยว (Management to reduce burning of rice stubble and straw after harvesting). The 15th National and 11th International PIM Conference, 6 June 2025, pp. 46–56. States about 650 kg/rai/year of straw and stubble and 69% of rice area burned (about 44.85 million rai), citing ไขขวัญ กองจันทร์ และคณะ (2564), วารสารวิทยาศาสตร์และนวัตกรรมการเกษตร 52(1), 20–31.</li>
+                <li>Division of Plant Protection and Soil-Fertilizer Management, Department of Agricultural Extension. การใช้ปุ๋ยในนาข้าวที่เหมาะสมตามระยะการเจริญเติบโตของข้าว. วารสารส่งเสริมการเกษตร ปีที่ 57 ฉบับที่ 318 (ก.ย.–ต.ค. 2567), pp. 16–17 (timing by growth stage, no kg/rai rates).</li>
+                <li>Rice Department (กรมการข้าว), Rice Knowledge Bank. คำแนะนำการใส่ปุ๋ยตามนิเวศน์การปลูกข้าว: ข้าวนาชลประทาน นาหว่านน้ำตม. https://rkb.ricethailand.go.th/web/content_page.php?code=A-9GDOOLVW6X</li>
+                <li>Pleanjai, S. (2018). Greenhouse gases emission of organic car wax processing from rice bran oil. Science and Technology RMUTT Journal, 8(1), 41–48. In-season rice in Pathum Thani: 741 kg/rai, NPK 20-20-0 at 25 kg/rai plus urea at 10 kg/rai, fuel 20.82 L/rai, GWP 25 and 298. Comparison only.</li>
+                <li>Thailand Greenhouse Gas Management Organization (TGO), Thai Carbon Label: Emission Factor (CFP), July 2569 edition (updated 2 Oct 2569). Thai National LCI Database (TIIS-MTEC-NSTDA), IPCC 2013 GWP-100; grid electricity 0.5562 kg CO₂e/kWh. https://thaicarbonlabel.tgo.or.th</li>
+                <li>Benchmark: Cha-un et al., SMART GHG application, Suphan Buri communities, 1.09 to 1.77 kg CO₂e/kg paddy (https://sciforum.net/paper/12259).</li>
+            </ol>
         </section>
 
     </main>
@@ -424,16 +455,17 @@
     <script>
         // Raw dataset hardcoded from SQL View output
         const rawDataset = [
-            { batch_id: 'CENTRAL-2024-CHAINAT1', variety: 'Chai Nat 1', area_rai: 65777, yield_kg: 40979000, yield_ton: 40979, ch4_ton: 34515.98, fert_ton: 8612.30, burn_ton: 33041.10, diesel_ton: 1331.98, total_ton: 77501.36, cfp: 1.8912, ch4_pct: 44.54, fert_pct: 11.11, burn_pct: 42.63, diesel_pct: 1.72 },
-            { batch_id: 'CENTRAL-2024-GOV-NON-SENSITIVE', variety: 'Gov Non-Photoperiod Sensitive', area_rai: 5089249, yield_kg: 3425164000, yield_ton: 3425164, ch4_ton: 2544575.64, fert_ton: 666344.43, burn_ton: 2556431.56, diesel_ton: 103057.29, total_ton: 5870408.92, cfp: 1.7139, ch4_pct: 43.35, fert_pct: 11.35, burn_pct: 43.55, diesel_pct: 1.76 },
-            { batch_id: 'CENTRAL-2024-GOV-SENSITIVE', variety: 'Gov Photoperiod Sensitive', area_rai: 282677, yield_kg: 132576000, yield_ton: 132576, ch4_ton: 162326.25, fert_ton: 37011.41, burn_ton: 141994.31, diesel_ton: 5724.21, total_ton: 347056.18, cfp: 2.6178, ch4_pct: 46.77, fert_pct: 10.66, burn_pct: 40.91, diesel_pct: 1.65 },
-            { batch_id: 'CENTRAL-2024-KDML105', variety: 'Khao Dawk Mali 105', area_rai: 1405882, yield_kg: 486435000, yield_ton: 486435, ch4_ton: 772524.29, fert_ton: 184074.64, burn_ton: 706202.65, diesel_ton: 28469.11, total_ton: 1691270.69, cfp: 3.4769, ch4_pct: 45.68, fert_pct: 10.88, burn_pct: 41.76, diesel_pct: 1.68 },
-            { batch_id: 'CENTRAL-2024-NATIVE', variety: 'Native Varieties', area_rai: 148088, yield_kg: 58791000, yield_ton: 58791, ch4_ton: 77708.05, fert_ton: 19389.42, burn_ton: 74387.56, diesel_ton: 2998.78, total_ton: 174483.81, cfp: 2.9679, ch4_pct: 44.54, fert_pct: 11.11, burn_pct: 42.63, diesel_pct: 1.72 },
-            { batch_id: 'CENTRAL-2024-OVERALL', variety: 'Central Region (Overall)', area_rai: 8269722, yield_kg: 5003181000, yield_ton: 5003181, ch4_ton: 4216658.47, fert_ton: 1082769.42, burn_ton: 4154046.76, diesel_ton: 167461.87, total_ton: 9620936.52, cfp: 1.9230, ch4_pct: 43.83, fert_pct: 11.25, burn_pct: 43.18, diesel_pct: 1.74 },
-            { batch_id: 'CENTRAL-2024-PATHUM1', variety: 'Pathum Thani 1', area_rai: 1117983, yield_kg: 789311000, yield_ton: 789311, ch4_ton: 586653.08, fert_ton: 146379.51, burn_ton: 561585.22, diesel_ton: 22639.16, total_ton: 1317256.97, cfp: 1.6689, ch4_pct: 44.54, fert_pct: 11.11, burn_pct: 42.63, diesel_pct: 1.72 },
-            { batch_id: 'CENTRAL-2024-RD6', variety: 'RD6', area_rai: 8733, yield_kg: 3109000, yield_ton: 3109, ch4_ton: 5231.05, fert_ton: 1143.43, burn_ton: 4386.76, diesel_ton: 176.84, total_ton: 10938.08, cfp: 3.5182, ch4_pct: 47.82, fert_pct: 10.45, burn_pct: 40.11, diesel_pct: 1.62 },
-            { batch_id: 'CENTRAL-2024-SP6090', variety: 'Suphan Buri 60,90', area_rai: 8648, yield_kg: 5163000, yield_ton: 5163, ch4_ton: 4323.92, fert_ton: 1132.30, burn_ton: 4344.06, diesel_ton: 175.12, total_ton: 9975.40, cfp: 1.9321, ch4_pct: 43.35, fert_pct: 11.35, burn_pct: 43.55, diesel_pct: 1.76 },
-            { batch_id: 'CENTRAL-2024-SUPHAN1', variety: 'Suphan Buri 1', area_rai: 140035, yield_kg: 102926000, yield_ton: 102926, ch4_ton: 73482.30, fert_ton: 18335.03, burn_ton: 70342.38, diesel_ton: 2835.71, total_ton: 164995.42, cfp: 1.6030, ch4_pct: 44.54, fert_pct: 11.11, burn_pct: 42.63, diesel_pct: 1.72 }
+            { batch_id: 'CENTRAL-2024-CHAINAT1', variety: 'Chai Nat 1', area_rai: 67998, yield_kg: 42463000, yield_ton: 42463, ch4_ton: 43562.24, fert_ton: 8903.10, burn_ton: 34156.76, diesel_ton: 1376.96, total_ton: 87999.05, cfp: 2.0724, ch4_pct: 49.50, fert_pct: 10.12, burn_pct: 38.81, diesel_pct: 1.56 },
+            { batch_id: 'CENTRAL-2024-GOV-NON-SENSITIVE', variety: 'Gov Non-Photoperiod Sensitive', area_rai: 5247943, yield_kg: 3544087000, yield_ton: 3544087, ch4_ton: 3362042.20, fert_ton: 687122.52, burn_ton: 2636146.73, diesel_ton: 106270.85, total_ton: 6791582.30, cfp: 1.9163, ch4_pct: 49.50, fert_pct: 10.12, burn_pct: 38.81, diesel_pct: 1.56 },
+            { batch_id: 'CENTRAL-2024-GOV-SENSITIVE', variety: 'Gov Photoperiod Sensitive', area_rai: 291234, yield_kg: 137255000, yield_ton: 137255, ch4_ton: 186576.15, fert_ton: 38131.79, burn_ton: 146292.66, diesel_ton: 5897.49, total_ton: 376898.09, cfp: 2.7460, ch4_pct: 49.50, fert_pct: 10.12, burn_pct: 38.81, diesel_pct: 1.56 },
+            { batch_id: 'CENTRAL-2024-HOMSUPHAN', variety: 'Hom Suphan Buri', area_rai: 1701, yield_kg: 881000, yield_ton: 881, ch4_ton: 1089.73, fert_ton: 222.71, burn_ton: 854.45, diesel_ton: 34.45, total_ton: 2201.34, cfp: 2.4987, ch4_pct: 49.50, fert_pct: 10.12, burn_pct: 38.81, diesel_pct: 1.56 },
+            { batch_id: 'CENTRAL-2024-KDML105', variety: 'Khao Dawk Mali 105', area_rai: 1449256, yield_kg: 503313000, yield_ton: 503313, ch4_ton: 928451.36, fert_ton: 189753.67, burn_ton: 727990.27, diesel_ton: 29347.43, total_ton: 1875542.74, cfp: 3.7264, ch4_pct: 49.50, fert_pct: 10.12, burn_pct: 38.81, diesel_pct: 1.56 },
+            { batch_id: 'CENTRAL-2024-NATIVE', variety: 'Native Varieties', area_rai: 152693, yield_kg: 60783000, yield_ton: 60783, ch4_ton: 97821.24, fert_ton: 19992.37, burn_ton: 76700.75, diesel_ton: 3092.03, total_ton: 197606.39, cfp: 3.2510, ch4_pct: 49.50, fert_pct: 10.12, burn_pct: 38.81, diesel_pct: 1.56 },
+            { batch_id: 'CENTRAL-2024-OVERALL', variety: 'Central Region (Overall)', area_rai: 8525808, yield_kg: 5219725000, yield_ton: 5219725, ch4_ton: 5461973.64, fert_ton: 1116299.22, burn_ton: 4282683.87, diesel_ton: 172647.61, total_ton: 11033604.34, cfp: 2.1138, ch4_pct: 49.50, fert_pct: 10.12, burn_pct: 38.81, diesel_pct: 1.56 },
+            { batch_id: 'CENTRAL-2024-PATHUM1', variety: 'Pathum Thani 1', area_rai: 1152995, yield_kg: 816299000, yield_ton: 816299, ch4_ton: 738654.72, fert_ton: 150963.69, burn_ton: 579172.45, diesel_ton: 23348.15, total_ton: 1492139.00, cfp: 1.8279, ch4_pct: 49.50, fert_pct: 10.12, burn_pct: 38.81, diesel_pct: 1.56 },
+            { batch_id: 'CENTRAL-2024-RD6', variety: 'RD6', area_rai: 9002, yield_kg: 3210000, yield_ton: 3210, ch4_ton: 5767.04, fert_ton: 1178.65, burn_ton: 4521.88, diesel_ton: 182.29, total_ton: 11649.86, cfp: 3.6292, ch4_pct: 49.50, fert_pct: 10.12, burn_pct: 38.81, diesel_pct: 1.56 },
+            { batch_id: 'CENTRAL-2024-SP6090', variety: 'Suphan Buri 60,90', area_rai: 8916, yield_kg: 5329000, yield_ton: 5329, ch4_ton: 5711.95, fert_ton: 1167.39, burn_ton: 4478.69, diesel_ton: 180.55, total_ton: 11538.57, cfp: 2.1652, ch4_pct: 49.50, fert_pct: 10.12, burn_pct: 38.81, diesel_pct: 1.56 },
+            { batch_id: 'CENTRAL-2024-SUPHAN1', variety: 'Suphan Buri 1', area_rai: 144070, yield_kg: 106105000, yield_ton: 106105, ch4_ton: 92297.00, fert_ton: 18863.34, burn_ton: 72369.24, diesel_ton: 2917.42, total_ton: 186447.01, cfp: 1.7572, ch4_pct: 49.50, fert_pct: 10.12, burn_pct: 38.81, diesel_pct: 1.56 }
         ];
 
         // Attach yield_per_rai to dataset
